@@ -8,3 +8,4 @@ if dohod > rashod:
           f"Прибыль на одного сотрудника - {dohod / shtat}")
 else:
     print(f"Убыток фирмы -", rashod - dohod)
+    
