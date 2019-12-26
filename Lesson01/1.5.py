@@ -7,5 +7,4 @@ if dohod > rashod:
           f"Рентабельность - {itog / dohod} \n"
           f"Прибыль на одного сотрудника - {dohod / shtat}")
 else:
-    print(f"Убыток фирмы -", rashod - dohod)
-    
+    print(f"Убыток фирмы -", rashod - dohod)    
