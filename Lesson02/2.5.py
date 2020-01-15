@@ -7,7 +7,9 @@ while num != "q":
     l = my_list.copy()
     for el in l:
         x = l.index(el)
-        if int(num) > int(el):
+        if int(el) < 0:
+            break
+        elif int(num) > int(el):
             my_list[x:x] = [num]
             print(my_list)
             break
