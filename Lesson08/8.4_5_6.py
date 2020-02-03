@@ -63,20 +63,58 @@ class Copier(Tech):
 
 
 while True:
-    printer_attr = ["brand", "model", "price", "printer_type"]
-    scanner_attrib = ["brand", "model", "price", "size"]
-    copier_attrib = ["brand", "model", "price", "speed"]
-
+    # printer_attr = ["brand", "model", "price", "printer_type"]
     tech_type = {1: "Printer", 2: "Scanner", 3: "Copier"}
     t_t_num = input(f"Введите тип оргтехники:\n 1 - Printer\n 2 - Scanner\n 3 - Copier\n(Enter для выхода):")
     if t_t_num == "":
         break
-
-
-
-
-
-
+    elif int(t_t_num) == 1:
+        """Принтер"""
+        brand = input("Введите brand принтера: ")
+        model = input("Введите model принтера: ")
+        while True:
+            price = input("Введите price принтера: ")
+            try:
+                float(price)
+            except ValueError:
+                print("Цена должна быть числом")
+            else:
+                break
+        printer_type = input("Введите printer_type принтера: ")
+        Printer(brand, model, price, printer_type).get_in()
+        print(Warehouse.warehouse)
+    elif int(t_t_num) == 2:
+        """Сканер"""
+        # scanner_attrib = ["brand", "model", "price", "size"]
+        brand = input("Введите brand сканера: ")
+        model = input("Введите model сканера: ")
+        while True:
+            price = input("Введите price сканера: ")
+            try:
+                float(price)
+            except ValueError:
+                print("Цена должна быть числом")
+            else:
+                break
+        size = input("Введите size сканера: ")
+        Scanner(brand, model, price, size).get_in()
+        print(Warehouse.warehouse)
+    elif int(t_t_num) == 3:
+        """Копир"""
+        # copier_attrib = ["brand", "model", "price", "speed"]
+        brand = input("Введите brand копира: ")
+        model = input("Введите model копира: ")
+        while True:
+            price = input("Введите price копира: ")
+            try:
+                float(price)
+            except ValueError:
+                print("Цена должна быть числом")
+            else:
+                break
+        speed = input("Введите speed копира: ")
+        Scanner(brand, model, price, speed).get_in()
+        print(Warehouse.warehouse)
 
 """
 pr1 = Printer("qq", "ww", 33, "jet")
